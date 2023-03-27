@@ -1,0 +1,2 @@
+Pillow == 9.4.0
+django-thumbnails == 0.7.0
