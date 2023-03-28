@@ -1,7 +1,7 @@
 from factory import SubFactory
 from factory.django import DjangoModelFactory
-
-from images.models import User, Profile
+from django.contrib.auth.models import User
+from images.models import Profile
 
 
 class UserFactory(DjangoModelFactory):

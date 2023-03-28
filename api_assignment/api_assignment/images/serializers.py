@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from images.models import User, Image, Profile
+from django.contrib.auth.models import User
+from images.models import Image, Profile
 
 
 class ProfileSerializer(serializers.ModelSerializer):

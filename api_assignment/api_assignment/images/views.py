@@ -1,8 +1,9 @@
 from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
-from images.models import User, Profile
+from django.contrib.auth.models import User
+from images.models import Profile
 from images.serializers import ProfileSerializer, ImageSerializer
-from images.forms import ImageForm
+# from images.forms import ImageForm
 from rest_framework.response import Response
 from rest_framework import status
 
@@ -27,10 +28,10 @@ class ImageUploadView(APIView):
     @staticmethod
     def upload_image(request):
         if request.method == 'POST':
-            form = ImageForm(request.POST, request.FILES)
-            if form.is_valid():
-                form.save()
+            # form = ImageForm(request.POST, request.FILES)
+            # if form.is_valid():
+            #     form.save()
                 return Response(request.data, status=status.HTTP_201_CREATED)
-            else:
-                # form = ImageForm()
-                return Response(status=status.HTTP_400_BAD_REQUEST)
+            # else:
+            #     # form = ImageForm()
+            #     return Response(status=status.HTTP_400_BAD_REQUEST)
